@@ -126,20 +126,16 @@ class MaleIdol extends Idol{
     }
 }
 
-const cIveMembers = iveMembers.map(
-    (x) => new FemaleIdol(x['name'], x['year']),
-);
+const cIveMembers = iveMembers.map((x) => new FemaleIdol(x['name'], x['year']));
 console.log(cIveMembers);
 
-const cBtsMembers = btsMembers.map(
-    (x) => new MaleIdol(x['name'], x['year']),
-);
+const cBtsMembers = btsMembers.map((x) => new MaleIdol(x['name'], x['year']));
 console.log(cBtsMembers);
 
 const iveGroup = new IdolGroup(
     '아이브',
     cIveMembers,
-)
+);
 console.log(iveGroup);
 
 const btsGroup = new IdolGroup(
@@ -169,7 +165,7 @@ const allTogether = new Country(
         new IdolGroup(
             '방탄소년단',
             btsMembers.map(
-                (x) => new MaleIdol(x['name'], x['year']),
+                (x) => new FemaleIdol(x['name'], x['year']),
             ),
         ),
     ],
